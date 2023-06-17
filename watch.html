@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+body{
+background:black;
+}
+#box{
+height:200px;
+width:600px;
+margin:100px auto;
+}
+.col{
+height:150px;
+width:150px;
+float:left;
+margin:25px;
+border-radius:10px;
+border:15px solid red;
+text-align:center;
+line-height:120px;
+text-align: center;
+font-size:100px;
+font-family:Digital-7;
+box-sizing:border-box;
+box-shadow:0px 0px 5px 10px rgba(226,35,26,.5),0px 0px 5px 20px rgba(226,35,26,.5),0px 0px 5px 30px rgba(226,35,26,.5); 
+color:red;
+}
+</style>
+<script>
+
+
+var demo=()=>
+{
+var hh=document.querySelector("#h")
+var mm=document.querySelector("#m")
+var ss=document.querySelector("#s")
+var obj=new Date()
+
+
+if(obj.getHours()<10){
+    hh.innerText="0"+obj.getHours()
+
+}
+else{
+    hh.innerText=obj.getHours()
+}
+if(obj.getMinutes()<10){
+    mm.innerText="0"+obj.getMinutes()
+}
+else{
+    mm.innerText=obj.getMinutes()
+}
+if(obj.getSeconds()<10){
+    ss.innerText="0"+obj.getSeconds()
+}
+else{
+    ss.innerText=obj.getSeconds()
+}
+}
+setInterval(demo,1000)
+</script>
+</head>
+<body>
+<div id="box">
+<div class="col" id="h">HH</div>
+<div class="col" id="m">MM</div>
+<div class="col" id="s">SS</div>
+</div>
+</body>
+</html>
